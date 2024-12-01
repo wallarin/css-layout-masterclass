@@ -1,0 +1,238 @@
+// body {
+//     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+// }
+
+/*
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 10px;
+
+    li {
+        background-color: tomato;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 7px;
+        &:hover {
+            opacity: 0.8;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+}
+*/
+
+// @mixin alert($bgColor) {
+//     margin: 10px;
+//     padding: 10px 20px;
+//     border-radius: 10px;
+//     border: 1px dashed black;
+//     background-color: $bgColor;
+//     @content;
+// }
+
+// .success {
+//     @include alert(green) {
+//         font-size: 12px;
+//     }
+// }
+
+// .error {
+//     @include alert(tomato);
+
+// }
+
+// .warning {
+//     @include alert(yellow) {
+//         text-decoration: underline;
+//     }
+// }
+
+// $breakpoint-sm: 480px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 1024px;
+// $breakpoint-xl: 1200px;
+
+// @mixin smallDevice {
+//     @media screen and (min-width: $breakpoint-sm) {
+//         @content;
+//     }
+// }
+
+// @mixin mediumDevice {
+//     @media screen and (min-width: $breakpoint-md) {
+//         @content;
+//     }
+// }
+
+// @mixin largeDevice {
+//     @media screen and (min-width: $breakpoint-lg) {
+//         @content;
+//     }
+// }
+
+// @mixin xlDevice {
+//     @media screen and (min-width: $breakpoint-xl) {
+//         @content;
+//     }
+// }
+
+// body {
+//     @include smallDevice {
+//         background-color: blue;
+//     }
+
+//     @include mediumDevice {
+//         background-color: red;
+//     }
+
+//     @include largeDevice {
+//         background-color: purple;
+//     }
+
+//     @include xlDevice {
+//         background-color: pink;
+//     }
+// }
+
+@import "./reset.scss";
+
+body {
+    background-color: #d7e2cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.phone {
+    background-color: black;
+    border-radius: 50px;
+    height: 95%;
+    width: 420px;
+    padding: 50px 10px;
+    box-sizing: border-box;
+}
+
+.phone-header {
+    margin: 0 15px;
+    overflow-x: hidden;
+
+    .header-list {
+        list-style-type: none;
+        color: white;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+        overflow-x: scroll;
+
+        .header-list-item {
+            display: inline-block;
+            padding: 10px;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            white-space: nowrap;
+        }
+
+        .selected {
+            color: black;
+            background-color: white;
+        }
+    }
+}
+
+.main-contents {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+    grid-template-columns: repeat(2, 1fr);
+
+
+    .content-card {
+        border-radius: 20px;
+        background-color: white;
+        padding: 20px 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: space-between;
+
+        .card-title {
+            font-size: 28px;
+            letter-spacing: 0.05rem;
+            line-height: 2rem
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            
+            
+            button {
+                font-size: 12px;
+                border-radius: 20px;
+                padding: 10px 13px;
+
+                &:hover {
+                    cursor: pointer;
+                }
+
+                &:last-child {
+                    background-color: white;
+                    font-weight: bold;
+                }
+            }
+
+            .free {
+                background-color: #FDD927;
+                font-weight: bold;
+            }
+
+            .not-free {
+                background-color: #E0A4F7;
+            }
+            
+        }
+
+        &:first-child {
+            background-color: #23272B;
+            color: white;
+            border: 1px solid white;
+        }
+
+        &:nth-child(2) {
+            background-color: #F3F1ED;
+        }
+        &:nth-child(3) {
+            background-color: #F9FDB6;
+        }
+        &:nth-child(4) {
+            background-color: #A594F1;
+        }
+        &:nth-child(5) {
+            background-color: #FDCDCB;
+        }
+        &:nth-child(6) {
+            background-color: #CEFCDD;
+        }
+
+        &:nth-child(3n) {
+            grid-column: span 2;
+        }
+    }
+}
+
+
+
+
+
+
+
+
